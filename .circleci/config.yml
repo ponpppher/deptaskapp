@@ -9,16 +9,16 @@ jobs:
     docker:
       # specify the version you desire here
        - image: circleci/ruby:2.5.0-node
-         enviroment:
+         environment:
            PGHOST: 127.0.0.1
-           PGUSER: ubuntu
+           PGUSER: postgres
            RAILS_ENV: test
       # Specify service dependencies here if necessar
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
        - image: circleci/postgres:9.5-alpine
          environment:
-           POSTGRES_USER: ubuntu
+           POSTGRES_USER: postgres
            POSTGRES_DB: deptaskapp_test 
            POSTGRES_PASSWORD: ""
 
@@ -61,7 +61,7 @@ jobs:
           command: |
             bundle exec rake db:migrate
           environment:
-            DATABASE_URL: "postgres://ubuntu@localhost:5432/deptaskapp_test"
+            DATABASE_URL: "postgres://postgres@localhost:5432/deptaskapp_test"
 
       # run tests!
       - run:
