@@ -1,9 +1,9 @@
 inherit_from: .rubocop_todo.yml
 
 ALLCops:
-  Exclude:
-    - bin/**/*
-    - db/**/*
-    - tmp/**/*
-    - vendor/**/*
   TargetRubyVersion: 2.5
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
