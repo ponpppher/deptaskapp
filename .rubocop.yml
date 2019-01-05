@@ -7,6 +7,6 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
     - 'config/**/*'
-    - 'rspec/**/*'
+    - 'spec/**/*'
     - 'app/models/blog.rb'
   TargetRubyVersion: 2.5
